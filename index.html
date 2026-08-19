@@ -521,20 +521,6 @@ section{position:relative;padding-block:var(--s7)}
   color:var(--creme-doux);margin-top:.7rem}
 
 /* ============================================================
-   AVIS — citations éditoriales, pas de cartes
-   ============================================================ */
-.avis__grille{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s6) var(--s5);margin-top:var(--s5)}
-@media (max-width:56rem){.avis__grille{grid-template-columns:1fr;gap:var(--s4)}}
-.avis__grille blockquote{margin:0;position:relative;padding-top:var(--s3)}
-.avis__grille blockquote::before{content:"“";position:absolute;top:-1.6rem;left:-.4rem;
-  font-family:"Cormorant Garamond",serif;font-size:6rem;line-height:1;color:var(--or-voile)}
-.avis__grille p{font-family:"Cormorant Garamond",serif;font-size:clamp(1.3rem,1.05rem + 1.1vw,1.85rem);
-  line-height:1.42;color:var(--creme);font-style:italic;font-weight:300;position:relative}
-.avis__qui{display:flex;align-items:center;gap:.8rem;margin-top:var(--s2);
-  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--creme-faible)}
-.avis__qui i{width:1.6rem;height:1px;background:var(--or-sombre);display:block;flex:none}
-
-/* ============================================================
    CONTACT — horaires + adresse
    ============================================================ */
 .contact__grille{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);margin-top:var(--s5)}
@@ -1006,34 +992,15 @@ section{position:relative;padding-block:var(--s7)}
   </div>
 </section>
 
-<!-- ══════════ AVIS ══════════ -->
-<section id="avis">
-  <div class="enveloppe">
-    <p class="oeil rv">06 &mdash; Ils y sont passés</p>
-    <h2 class="affiche rv" style="--d:80ms">5,0 sur Google.<br>Et <span class="or">pas par hasard.</span></h2>
-
-    <div class="avis__grille">
-      <blockquote class="rv" style="--d:120ms">
-        <p>Très bon salon, propre et professionnel.</p>
-        <div class="avis__qui"><i></i>Omar Aartri &middot; Google</div>
-      </blockquote>
-      <blockquote class="rv" style="--d:220ms">
-        <p>Un grand merci à Mr Radouane, un grand maître de coiffure, je recommande vivement.</p>
-        <div class="avis__qui"><i></i>Bernami Amine &middot; Local Guide</div>
-      </blockquote>
-    </div>
-
-    <div class="presta__pied rv" style="--d:300ms">
-      <p class="oeil" style="margin:0">Vous êtes déjà venu ?</p>
-      <a class="pilule pilule--fant" href="https://g.page/r/CdDQ4UI0tb3kEAE/review" target="_blank" rel="noopener">Laisser un avis</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ CONTACT ══════════ -->
+<!-- ══════════ CONTACT ══════════
+     La section « Avis » (citations Google en carrousel) a été retirée : le
+     widget Trustellas affiche ces mêmes avis en rotation directement sur le
+     site, une section statique dupliquant sa fonction n'a plus de raison
+     d'être. Le badge « 5,0 · 8 avis » du héros reste : c'est une note
+     agrégée, pas un carrousel de citations, donc pas de redondance. -->
 <section id="contact">
   <div class="enveloppe">
-    <p class="oeil rv">07 &mdash; Nous trouver</p>
+    <p class="oeil rv">06 &mdash; Nous trouver</p>
     <h2 class="affiche rv" style="--d:80ms">Prenez <span class="or">place</span></h2>
 
     <div class="contact__grille">
