@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Majestic — Barbier &amp; Spa Homme à Bouskoura | L'Excellence au Masculin</title>
+<meta name="description" content="Le Majestic, barbier prestige à Bouskoura, Triangle Vert. Coupe et barbe premium, Head Spa, hammam, massage, soins visage et cheveux, espace VIP. Réservation par WhatsApp, 7j/7.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/img/crown.png" type="image/png">
+<link rel="canonical" href="https://lemajestic.ma/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:site_name" content="Le Majestic">
+<meta property="og:title" content="Le Majestic — Barbier &amp; Spa Homme à Bouskoura">
+<meta property="og:description" content="Parce qu'un homme mérite plus qu'une simple coupe. Coupe, barbe, Head Spa, hammam et soins premium au Triangle Vert, Bouskoura.">
+<meta property="og:image" content="assets/img/interieur.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Le Majestic",
+  "alternateName": "Le Majestic Hair Salon",
+  "description": "Barbier prestige et spa homme à Bouskoura : coupe et barbe premium, Head Spa, hammam, massage, soins visage et cheveux, espace VIP.",
+  "image": "assets/img/devanture-large.jpg",
+  "logo": "assets/img/crown.png",
+  "url": "https://lemajestic.ma/",
+  "telephone": "+212521226542",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Triangle Vert",
+    "addressLocality": "Bouskoura",
+    "postalCode": "20250",
+    "addressRegion": "Casablanca-Settat",
+    "addressCountry": "MA"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.4835949, "longitude": -7.6247424 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "20:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "8" },
+  "sameAs": ["https://www.instagram.com/le_majestic_bouskoura/", "https://lemajestic.taplink.ws"],
+  "hasMap": "https://maps.google.com/?cid=16482330073818349776"
+}
+</script>
+
+<style>
+/* ============================================================
+   LE MAJESTIC — design system
+   Palette and type transcribed from the salon's own collateral
+   (Taplink theme config + Instagram art direction), not invented.
+   ============================================================ */
+:root{
+  /* ground */
+  --noir:        #0A0A0A;
+  --noir-2:      #121110;   /* elevated surface */
+  --noir-3:      #1B1814;   /* floating surface */
+  --noir-glass:  rgba(10,10,10,.72);
+
+  /* or — brand gold. #B59F6D is their declared value; the print
+     collateral runs warmer, so display type gets the brighter one. */
+  --or:          #C9A961;
+  --or-clair:    #E8C766;
+  --or-profond:  #B59F6D;
+  --or-sombre:   #6E5E39;
+  --or-voile:    rgba(201,169,97,.14);
+
+  /* texte */
+  --creme:       #F3EFE6;
+  --creme-doux:  #ADA69A;
+  --creme-faible:#7C766C;
+
+  /* rythme spatial — une seule échelle, pas de valeurs au hasard */
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem;
+  --s5:4rem;  --s6:6rem; --s7:7rem;   --s8:10rem;
+
+  --mesure: 62ch;
+  --bord: 1px solid rgba(201,169,97,.18);
+  --rayon: 2px;
+
+  /* mouvement */
+  --e-sortie: cubic-bezier(.16,.01,.77,1);
+  --e-doux:   cubic-bezier(.22,1,.36,1);
+  --e-net:    cubic-bezier(.65,.05,.36,1);
+
+  /* profondeur — ombres teintées or, jamais du noir plat */
+  --ombre-1: 0 1px 2px rgba(0,0,0,.5), 0 8px 24px -12px rgba(110,94,57,.35);
+  --ombre-2: 0 2px 4px rgba(0,0,0,.55), 0 18px 50px -18px rgba(110,94,57,.45);
+  --ombre-3: 0 4px 8px rgba(0,0,0,.6),  0 40px 90px -30px rgba(201,169,97,.32);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none !important}
+
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+}
+body{
+  margin:0;
+  background:var(--noir);
+  color:var(--creme);
+  font-family:"Jost",-apple-system,"Segoe UI",sans-serif;
+  font-weight:300;
+  font-size:clamp(.95rem,.9rem + .2vw,1.05rem);
+  line-height:1.75;
+  overflow-x:hidden;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}   /* sinon l attribut height du HTML l emporte sur aspect-ratio */
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+/* ---------- grain + halo : atmosphère, jamais une couleur plate ---------- */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(70rem 45rem at 82% -8%, rgba(201,169,97,.10), transparent 62%),
+    radial-gradient(52rem 38rem at 4% 42%,  rgba(184,159,109,.07), transparent 60%),
+    radial-gradient(60rem 40rem at 60% 108%,rgba(201,169,97,.09), transparent 64%);
+}
+
+/* ---------- typographie ---------- */
+.affiche{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:400;
+  line-height:.98;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin:0;
+}
+h1.affiche{font-size:clamp(2.9rem,1.4rem + 7.4vw,8rem);letter-spacing:-.035em}
+h2.affiche{font-size:clamp(2.1rem,1.2rem + 4.2vw,4.6rem);letter-spacing:-.028em}
+h3.affiche{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.2rem);letter-spacing:-.02em}
+.or{color:var(--or-clair)}
+
+.oeil{ /* eyebrow : petites capitales très espacées, blanc — leur signature */
+  font-family:"Jost",sans-serif;font-weight:300;
+  font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--creme-doux);margin:0;
+}
+.italique{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;font-weight:300;
+  font-size:clamp(1.1rem,1rem + .5vw,1.4rem);
+  color:var(--or-profond);letter-spacing:.01em;line-height:1.5;
+}
+p{margin:0 0 var(--s2);max-width:var(--mesure)}
+.doux{color:var(--creme-doux)}
+
+/* filet or à losange — leur séparateur récurrent */
+.filet{display:flex;align-items:center;gap:var(--s2);width:100%;max-width:20rem}
+.filet::before,.filet::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--or-sombre))}
+.filet::after{background:linear-gradient(270deg,transparent,var(--or-sombre))}
+.filet i{width:5px;height:5px;background:var(--or);transform:rotate(45deg);flex:none}
+.filet.centre{margin-inline:auto}
+
+/* ---------- mise en page ---------- */
+.enveloppe{width:min(100% - 2.5rem,78rem);margin-inline:auto}
+.large{width:min(100% - 2.5rem,92rem);margin-inline:auto}
+section{position:relative;padding-block:var(--s7)}
+@media (max-width:48rem){section{padding-block:var(--s6)}}
+
+/* ============================================================
+   RÉVÉLATIONS AU DÉFILEMENT
+   Balayage au scroll, pas d'IntersectionObserver : un saut de
+   défilement (capture scriptée) passe de 0 à 0 et ne déclenche
+   jamais IO. Aucun verrou rAF non plus — s'il est étranglé en
+   arrière-plan, le drapeau ne se libère plus et tout meurt.
+   ============================================================ */
+.rv{opacity:0;transform:translate3d(0,26px,0);
+    transition:opacity .9s var(--e-sortie),transform .9s var(--e-sortie);
+    transition-delay:var(--d,0ms)}
+.rv-g{transform:translate3d(-34px,0,0)}
+.rv-d{transform:translate3d(34px,0,0)}
+.rv-z{transform:scale(1.06);opacity:0}
+.rv-v{clip-path:inset(0 0 100% 0);opacity:1;transform:none;
+      transition:clip-path 1.15s var(--e-doux);transition-delay:var(--d,0ms)}
+.rv.in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv,.rv-v{opacity:1 !important;transform:none !important;clip-path:none !important;transition:none !important}
+  .defile__piste{animation:none !important}
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* ============================================================
+   CURSEUR — anneau doré, pointeur fin uniquement
+   ============================================================ */
+.curseur{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
+  width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;
+  border:1px solid var(--or);opacity:0;
+  transition:opacity .3s,width .35s var(--e-doux),height .35s var(--e-doux),
+             margin .35s var(--e-doux),background-color .35s,border-color .35s}
+.curseur.actif{opacity:.75}
+.curseur.grand{width:64px;height:64px;margin:-32px 0 0 -32px;background:var(--or-voile);border-color:var(--or-clair)}
+@media (hover:none),(pointer:coarse){.curseur{display:none}}
+
+/* ============================================================
+   BARRE DE NAVIGATION
+   ============================================================ */
+.barre{position:fixed;inset:0 0 auto;z-index:900;
+  transition:background-color .5s var(--e-sortie),backdrop-filter .5s,border-color .5s,padding .5s var(--e-sortie);
+  border-bottom:1px solid transparent;padding-block:var(--s3)}
+.barre.pose{background:var(--noir-glass);backdrop-filter:blur(14px) saturate(1.3);
+  -webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom-color:rgba(201,169,97,.16);padding-block:.7rem}
+.barre__int{display:flex;align-items:center;justify-content:space-between;gap:var(--s3)}
+
+.marque{display:flex;align-items:center;gap:.75rem;flex:none}
+.marque img{width:38px;height:38px;object-fit:contain;transition:transform .6s var(--e-doux)}
+.marque:hover img{transform:rotate(-6deg) scale(1.08)}
+.marque__mot{display:flex;flex-direction:column;line-height:1}
+.marque__nom{font-family:"Cormorant Garamond",serif;font-size:1.28rem;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--or-clair)}
+.marque__sous{font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;color:var(--creme-faible);margin-top:.28rem}
+
+.menu{display:flex;align-items:center;gap:var(--s4);list-style:none;margin:0;padding:0}
+.menu a{position:relative;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--creme-doux);padding-block:.35rem;transition:color .4s var(--e-sortie)}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--or);transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--e-sortie)}
+.menu a:hover,.menu a:focus-visible{color:var(--creme)}
+.menu a:hover::after,.menu a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+@media (max-width:62rem){.menu{display:none}}
+
+/* bouton pilule bordé or — leur forme de CTA */
+.pilule{position:relative;display:inline-flex;align-items:center;gap:.6rem;
+  padding:.85rem 1.7rem;border:1px solid var(--or);border-radius:100px;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or-clair);
+  overflow:hidden;isolation:isolate;flex:none;
+  transition:color .45s var(--e-sortie),border-color .45s var(--e-sortie),box-shadow .45s var(--e-sortie),transform .45s var(--e-doux)}
+.pilule::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--or-clair);
+  transform:translateY(101%);transition:transform .55s var(--e-doux)}
+.pilule:hover,.pilule:focus-visible{color:var(--noir);border-color:var(--or-clair);box-shadow:var(--ombre-2)}
+.pilule:hover::before,.pilule:focus-visible::before{transform:translateY(0)}
+.pilule:active{transform:scale(.97)}
+.pilule--plein{background:var(--or-clair);color:var(--noir);border-color:var(--or-clair)}
+.pilule--plein::before{background:var(--creme)}
+.pilule--fant{border-color:rgba(201,169,97,.32);color:var(--creme-doux)}
+.pilule--fant::before{background:var(--or-clair)}
+.pilule--fant:hover{color:var(--noir)}
+:where(a,button):focus-visible{outline:2px solid var(--or-clair);outline-offset:4px;border-radius:var(--rayon)}
+
+.brulot{display:none;width:44px;height:44px;position:relative;flex:none}
+.brulot span{position:absolute;left:11px;width:22px;height:1px;background:var(--or-clair);
+  transition:transform .45s var(--e-doux),opacity .3s}
+.brulot span:nth-child(1){top:17px}
+.brulot span:nth-child(2){top:23px}
+.brulot span:nth-child(3){top:29px}
+.brulot[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.brulot[aria-expanded="true"] span:nth-child(2){opacity:0}
+.brulot[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:62rem){.brulot{display:block}.barre .pilule{display:none}}
+
+.tiroir{position:fixed;inset:0;z-index:880;background:var(--noir);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s3);
+  opacity:0;visibility:hidden;transition:opacity .5s var(--e-sortie),visibility .5s}
+.tiroir.ouvert{opacity:1;visibility:visible}
+.tiroir a{font-family:"Cormorant Garamond",serif;font-size:2rem;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--creme);opacity:0;transform:translateY(18px);
+  transition:opacity .6s var(--e-sortie),transform .6s var(--e-sortie),color .3s}
+.tiroir.ouvert a{opacity:1;transform:none}
+.tiroir a:hover{color:var(--or-clair)}
+
+/* ============================================================
+   HÉROS — plein cadre, photo réelle du salon
+   ============================================================ */
+.heros{min-height:100svh;display:flex;align-items:flex-end;padding-block:var(--s8) var(--s5);overflow:hidden}
+.heros__fond{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.heros__fond img{width:100%;height:100%;object-fit:cover;object-position:58% 42%;
+  transform:scale(1.12);animation:respire 26s var(--e-doux) infinite alternate}
+@keyframes respire{to{transform:scale(1.01) translateY(-1.2%)}}
+/* traitement couleur : la photo passe sous un voile chaud puis un dégradé */
+.heros__fond::before{content:"";position:absolute;inset:0;
+  background:#3A2A12;mix-blend-mode:multiply;opacity:.42}
+.heros__fond::after{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top,var(--noir) 2%,rgba(10,10,10,.86) 26%,rgba(10,10,10,.42) 56%,rgba(10,10,10,.68) 100%),
+    linear-gradient(to right,rgba(10,10,10,.82),rgba(10,10,10,.12) 62%)}
+
+.heros__int{position:relative}
+.heros__oeil{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s3)}
+.heros__oeil i{width:2.6rem;height:1px;background:var(--or);display:block;flex:none}
+.heros h1{margin-bottom:var(--s3)}
+.heros h1 .l{display:block;overflow:hidden}
+.heros h1 .l>span{display:block;transform:translateY(105%);
+  transition:transform 1.1s var(--e-doux);transition-delay:var(--d,0ms)}
+.heros.pret h1 .l>span{transform:translateY(0)}
+.heros__sous{max-width:36ch;margin-bottom:var(--s4)}
+.heros__actes{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s6)}
+@media (max-width:34rem){
+  .heros__actes{flex-direction:column;align-items:stretch}
+  .heros__actes .pilule{justify-content:center}
+}
+
+.heros__pied{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s5);
+  padding-top:var(--s3);border-top:var(--bord)}
+.fait{display:flex;flex-direction:column;gap:.2rem}
+.fait__c{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--creme-faible)}
+.fait__v{font-family:"Cormorant Garamond",serif;font-size:1.15rem;letter-spacing:.04em;color:var(--creme)}
+.fait__v a:hover{color:var(--or-clair)}
+.etoiles{color:var(--or-clair);letter-spacing:.14em;font-size:.85rem}
+
+.souris{position:absolute;right:0;bottom:var(--s5);display:flex;align-items:center;gap:.8rem;
+  writing-mode:vertical-rl;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--creme-faible)}
+.souris i{width:1px;height:4rem;background:linear-gradient(var(--or),transparent);display:block;
+  animation:coule 2.4s var(--e-doux) infinite}
+@keyframes coule{0%{transform:scaleY(0);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+  50.1%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:62rem){.souris{display:none}}
+
+/* ============================================================
+   BANDEAU DÉFILANT
+   ============================================================ */
+.defile{padding-block:var(--s3);border-block:var(--bord);
+  background:linear-gradient(180deg,rgba(201,169,97,.05),transparent);overflow:hidden}
+.defile__piste{display:flex;width:max-content;animation:glisse 42s linear infinite}
+.defile:hover .defile__piste{animation-play-state:paused}
+.defile__grp{display:flex;align-items:center;flex:none}
+.defile span{font-family:"Cormorant Garamond",serif;font-size:clamp(1.4rem,1rem + 1.9vw,2.5rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--creme-faible);padding-inline:var(--s3);white-space:nowrap}
+.defile span:nth-child(even){color:var(--or-profond);font-style:italic;text-transform:none;letter-spacing:.02em}
+.defile em{color:var(--or);font-style:normal;padding-inline:.4rem}
+@keyframes glisse{to{transform:translate3d(-50%,0,0)}}
+
+/* ============================================================
+   MANIFESTE — composition asymétrique, image décalée
+   ============================================================ */
+.manif__grille{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s6);align-items:center}
+@media (max-width:62rem){.manif__grille{grid-template-columns:1fr;gap:var(--s4)}}
+.manif__texte h2{margin-block:var(--s3)}
+.manif__texte .italique{margin-bottom:var(--s3);display:block}
+.manif__liste{list-style:none;margin:var(--s4) 0 0;padding:0;display:grid;gap:.9rem;max-width:34rem}
+.manif__liste li{display:flex;gap:var(--s2);align-items:baseline;
+  padding-bottom:.9rem;border-bottom:1px solid rgba(201,169,97,.1)}
+.manif__liste b{font-family:"Cormorant Garamond",serif;font-size:.85rem;color:var(--or);
+  letter-spacing:.1em;flex:none;width:2.2rem;font-weight:500}
+.manif__liste span{color:var(--creme-doux);font-size:.92rem}
+
+.manif__img{position:relative}
+.manif__img img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:contrast(1.06) saturate(.92)}
+.manif__img::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:#4A3517;mix-blend-mode:multiply;opacity:.28}
+.manif__img::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(to top,rgba(10,10,10,.7),transparent 45%)}
+.manif__cadre{position:absolute;inset:-1.2rem -1.2rem auto auto;width:64%;height:78%;
+  border:1px solid rgba(201,169,97,.3);z-index:1;pointer-events:none}
+/* en une colonne, un cadre 4:5 pleine largeur devient une tour : le
+   plan rapproché des outils perd sa lecture. On l'aplatit. */
+@media (max-width:62rem){
+  .manif__img img{aspect-ratio:4/3}
+  .manif__cadre{inset:-.8rem -.8rem auto auto;width:52%;height:60%}
+}
+.manif__note{position:absolute;left:-1.5rem;bottom:1.8rem;z-index:3;
+  background:var(--noir-3);border:var(--bord);box-shadow:var(--ombre-2);
+  padding:var(--s2) var(--s3);max-width:15rem}
+.manif__note b{display:block;font-family:"Cormorant Garamond",serif;color:var(--or-clair);
+  font-size:1.1rem;letter-spacing:.02em;margin-bottom:.2rem}
+.manif__note span{font-size:.72rem;letter-spacing:.05em;color:var(--creme-doux);line-height:1.5;display:block}
+@media (max-width:36rem){.manif__note{left:0;bottom:1rem}}
+
+/* ============================================================
+   PRESTATIONS — la liste EST la navigation (typographie surdimensionnée)
+   ============================================================ */
+.presta{background:linear-gradient(180deg,transparent,rgba(18,17,16,.85) 18%,rgba(18,17,16,.85) 82%,transparent)}
+.presta__tete{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);
+  flex-wrap:wrap;margin-bottom:var(--s5)}
+.presta__grille{display:grid;grid-template-columns:1fr 26rem;gap:var(--s6);align-items:start}
+@media (max-width:68rem){.presta__grille{grid-template-columns:1fr;gap:var(--s4)}}
+
+.presta__apercu{position:sticky;top:22vh;aspect-ratio:4/5;overflow:hidden;
+  border:var(--bord);background:var(--noir-3);box-shadow:var(--ombre-3)}
+.presta__apercu > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transform:scale(1.1);
+  transition:opacity .8s var(--e-sortie),transform 1.3s var(--e-doux)}
+.presta__apercu > img.vu{opacity:1;transform:scale(1)}
+.presta__apercu::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(to top,rgba(10,10,10,.55),transparent 55%),
+             radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(10,10,10,.5))}
+@media (max-width:68rem){
+  .presta__apercu{position:relative;top:0;order:-1;aspect-ratio:16/11;max-height:52vh}
+}
+/* Aucune photographie du hammam n'existe. Plutot qu'un cliche approchant qui
+   ferait passer un couloir pour un hammam, cette prestation assume un panneau. */
+.apercu__vide{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;gap:var(--s2);
+  padding:var(--s4);opacity:0;transform:scale(1.06);
+  background:radial-gradient(120% 90% at 50% 30%,rgba(201,169,97,.09),transparent 62%),var(--noir-3);
+  transition:opacity .8s var(--e-sortie),transform 1.3s var(--e-doux)}
+.apercu__vide.vu{opacity:1;transform:scale(1)}
+.apercu__vide img{width:56px;height:auto;opacity:.92}
+.apercu__vide p{max-width:22ch;margin:0}
+.apercu__vide .oeil{font-size:.62rem}
+
+.presta__liste{list-style:none;margin:0;padding:0;border-top:1px solid rgba(201,169,97,.12)}
+.ligne{border-bottom:1px solid rgba(201,169,97,.12);position:relative}
+.ligne__t{display:grid;grid-template-columns:3.2rem 1fr auto auto;align-items:center;gap:var(--s2);
+  width:100%;text-align:left;padding-block:clamp(1rem,.6rem + 1.1vw,1.7rem);
+  transition:padding-left .55s var(--e-sortie)}
+.ligne__n{font-family:"Cormorant Garamond",serif;font-size:.8rem;letter-spacing:.14em;
+  color:var(--creme-faible);transition:color .5s var(--e-sortie)}
+.ligne__nom{font-family:"Cormorant Garamond",serif;font-weight:400;text-transform:uppercase;
+  font-size:clamp(1.35rem,.9rem + 2.1vw,2.9rem);line-height:1.02;letter-spacing:-.02em;
+  color:var(--creme);transition:color .5s var(--e-sortie)}
+.ligne__fl{width:1.6rem;height:1px;background:var(--or);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s var(--e-sortie);flex:none}
+.ligne.actif .ligne__t{padding-left:1.1rem}
+.ligne.actif .ligne__nom{color:var(--or-clair)}
+.ligne.actif .ligne__n{color:var(--or)}
+.ligne.actif .ligne__fl{transform:scaleX(1)}
+.ligne::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--or);
+  transform:scaleY(0);transform-origin:bottom;transition:transform .55s var(--e-sortie)}
+.ligne.actif::before{transform:scaleY(1);transform-origin:top}
+
+.ligne__corps{overflow:hidden;height:0;transition:height .6s var(--e-doux)}
+.ligne__int{padding:0 0 var(--s3) 3.2rem;display:flex;flex-wrap:wrap;gap:var(--s3);align-items:flex-end;
+  justify-content:space-between}
+.ligne__int p{margin:0;max-width:46ch;font-size:.92rem;color:var(--creme-doux)}
+.ligne__int .pilule{padding:.6rem 1.2rem;font-size:.64rem}
+@media (max-width:36rem){.ligne__int{padding-left:0}}
+
+.presta__pied{margin-top:var(--s4);display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center;
+  padding-top:var(--s3);border-top:var(--bord)}
+
+/* ============================================================
+   TARIFS — relevés sur le Price List affiché en salon
+   ============================================================ */
+.tarifs__grille{columns:3;column-gap:var(--s5);margin-top:var(--s5)}
+@media (max-width:62rem){.tarifs__grille{columns:2;column-gap:var(--s4)}}
+@media (max-width:34rem){.tarifs__grille{columns:1}}
+.tgrp{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:var(--s4)}
+.tgrp h3{display:flex;align-items:center;gap:.8rem;margin:0 0 var(--s2);font-weight:400;
+  font-family:"Jost",sans-serif;font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+.tgrp h3::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(201,169,97,.42),transparent)}
+.tgrp dl{margin:0}
+.tl{display:flex;align-items:baseline;gap:.6rem;padding-block:.6rem;
+  border-bottom:1px solid rgba(201,169,97,.09)}
+.tl dt{margin:0;font-size:.88rem;color:var(--creme-doux);flex:none}
+.tl .pt{flex:1;border-bottom:1px dotted rgba(201,169,97,.24);transform:translateY(-.24em)}
+.tl dd{margin:0;font-family:"Cormorant Garamond",serif;font-size:1.05rem;letter-spacing:.04em;
+  color:var(--creme);white-space:nowrap}
+.tl dd em{font-style:normal;font-size:.6em;letter-spacing:.14em;color:var(--or-profond);margin-left:.2em}
+.tl dd.sd{font-size:.8rem;font-family:"Jost",sans-serif;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--creme-faible)}
+
+.tarifs__note{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);
+  margin-top:var(--s5);padding-top:var(--s3);border-top:var(--bord)}
+
+.ligne__prix{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--creme-faible);white-space:nowrap;transition:color .5s var(--e-sortie)}
+.ligne.actif .ligne__prix{color:var(--or-profond)}
+@media (max-width:34rem){.ligne__prix{display:none}}
+
+/* ============================================================
+   PACK SIGNATURE
+   ============================================================ */
+.pack{position:relative}
+.pack__boite{position:relative;border:var(--bord);background:
+    linear-gradient(150deg,rgba(201,169,97,.09),transparent 42%),var(--noir-2);
+  box-shadow:var(--ombre-3);padding:clamp(2rem,1rem + 4vw,4.5rem);overflow:hidden}
+.pack__boite::before{content:"";position:absolute;top:-40%;right:-14%;width:34rem;height:34rem;
+  background:radial-gradient(circle,rgba(201,169,97,.14),transparent 66%);pointer-events:none}
+.pack__grille{display:grid;grid-template-columns:1fr auto;gap:var(--s5);align-items:center;position:relative}
+@media (max-width:62rem){.pack__grille{grid-template-columns:1fr;gap:var(--s4)}}
+.pack h2{margin-block:var(--s2) var(--s3)}
+.pack__items{list-style:none;margin:var(--s3) 0 var(--s4);padding:0;display:grid;gap:.7rem}
+.pack__items li{display:flex;align-items:center;gap:.9rem;
+  font-family:"Cormorant Garamond",serif;font-size:clamp(1.05rem,.95rem + .5vw,1.35rem);
+  text-transform:uppercase;letter-spacing:.06em;color:var(--creme)}
+.pack__items i{width:6px;height:6px;background:var(--or);transform:rotate(45deg);flex:none}
+.pack__prix{text-align:center;padding:var(--s4);border:1px solid rgba(201,169,97,.28);
+  background:rgba(10,10,10,.5);min-width:15rem}
+.pack__prix b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.6rem;
+  color:var(--or-clair);line-height:1;letter-spacing:-.02em}
+.pack__prix span{display:block;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--creme-faible);margin-top:.7rem}
+.pack__prix .pilule{margin-top:var(--s3)}
+
+/* ============================================================
+   LE LIEU — bande pleine largeur + compteurs
+   ============================================================ */
+.lieu{padding-block:0}
+.lieu__vue{position:relative;min-height:min(88svh,44rem);display:flex;align-items:flex-end;overflow:hidden}
+.lieu__vue img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.lieu__vue::before{content:"";position:absolute;inset:0;background:#3A2A12;mix-blend-mode:multiply;opacity:.38}
+/* la devanture porte sa propre enseigne en gros caracteres : sans un voile
+   lateral franc, elle entre en concurrence avec le titre de la section. */
+.lieu__vue::after{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to right,rgba(10,10,10,.9),rgba(10,10,10,.62) 40%,rgba(10,10,10,.28) 70%,rgba(10,10,10,.48)),
+    linear-gradient(to top,var(--noir) 1%,rgba(10,10,10,.8) 28%,rgba(10,10,10,.28) 72%)}
+.lieu__int{position:relative;z-index:1;padding-block:var(--s6)}
+.lieu__txt{max-width:44rem;margin-bottom:var(--s5);text-shadow:0 2px 22px rgba(0,0,0,.7)}
+.lieu__txt h2{margin-block:var(--s3) var(--s2)}
+
+.chiffres{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3);
+  padding-top:var(--s4);border-top:var(--bord);
+  text-shadow:0 2px 18px rgba(0,0,0,.75)}
+@media (max-width:56rem){.chiffres{grid-template-columns:repeat(2,1fr);gap:var(--s4) var(--s3)}}
+.chiffre b{display:block;font-family:"Cormorant Garamond",serif;font-weight:400;
+  font-size:clamp(2.6rem,1.6rem + 3.2vw,4.6rem);line-height:1;letter-spacing:-.03em;color:var(--or-clair)}
+.chiffre b i{font-style:normal;font-size:.42em;letter-spacing:.06em;margin-left:.3em;color:var(--or-profond)}
+.chiffre span{display:block;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--creme-doux);margin-top:.7rem}
+
+/* ============================================================
+   AVIS — citations éditoriales, pas de cartes
+   ============================================================ */
+.avis__grille{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s6) var(--s5);margin-top:var(--s5)}
+@media (max-width:56rem){.avis__grille{grid-template-columns:1fr;gap:var(--s4)}}
+.avis__grille blockquote{margin:0;position:relative;padding-top:var(--s3)}
+.avis__grille blockquote::before{content:"“";position:absolute;top:-1.6rem;left:-.4rem;
+  font-family:"Cormorant Garamond",serif;font-size:6rem;line-height:1;color:var(--or-voile)}
+.avis__grille p{font-family:"Cormorant Garamond",serif;font-size:clamp(1.3rem,1.05rem + 1.1vw,1.85rem);
+  line-height:1.42;color:var(--creme);font-style:italic;font-weight:300;position:relative}
+.avis__qui{display:flex;align-items:center;gap:.8rem;margin-top:var(--s2);
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--creme-faible)}
+.avis__qui i{width:1.6rem;height:1px;background:var(--or-sombre);display:block;flex:none}
+
+/* ============================================================
+   CONTACT — horaires + adresse
+   ============================================================ */
+.contact__grille{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);margin-top:var(--s5)}
+@media (max-width:62rem){.contact__grille{grid-template-columns:1fr;gap:var(--s5)}}
+.horaires{list-style:none;margin:var(--s3) 0 0;padding:0}
+.horaires li{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s2);
+  padding-block:.85rem;border-bottom:1px solid rgba(201,169,97,.1)}
+.horaires li.auj{border-bottom-color:rgba(201,169,97,.4)}
+.horaires li.auj dt,.horaires li.auj dd{color:var(--or-clair)}
+.horaires dt{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--creme-doux);margin:0}
+.horaires dd{margin:0;font-family:"Cormorant Garamond",serif;font-size:1.1rem;letter-spacing:.04em;color:var(--creme)}
+.badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:var(--s3);
+  font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--creme-faible)}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--or-clair);flex:none;
+  box-shadow:0 0 0 0 rgba(201,169,97,.7);animation:pulse 2.6s var(--e-doux) infinite}
+.badge.ferme i{background:var(--creme-faible);animation:none;box-shadow:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(201,169,97,0)}100%{box-shadow:0 0 0 0 rgba(201,169,97,0)}}
+
+.coord{list-style:none;margin:var(--s3) 0 0;padding:0;display:grid;gap:var(--s3)}
+.coord li{display:grid;grid-template-columns:6.5rem 1fr;gap:var(--s2);align-items:baseline;
+  padding-bottom:var(--s3);border-bottom:1px solid rgba(201,169,97,.1)}
+.coord dt{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--creme-faible);margin:0}
+.coord dd{margin:0;font-family:"Cormorant Garamond",serif;font-size:1.15rem;letter-spacing:.03em;line-height:1.45}
+.coord dd a{transition:color .35s var(--e-sortie)}
+.coord dd a:hover{color:var(--or-clair)}
+.contact__actes{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+
+/* ============================================================
+   APPEL FINAL
+   ============================================================ */
+.final{text-align:center;padding-block:var(--s8)}
+.final .filet{margin-bottom:var(--s3)}
+.final h2{margin-bottom:var(--s3)}
+.final p{margin-inline:auto;text-align:center}
+.final .pilule{margin-top:var(--s3)}
+.final__fond{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(46rem 30rem at 50% 50%,rgba(201,169,97,.11),transparent 68%)}
+
+/* ============================================================
+   PIED DE PAGE
+   ============================================================ */
+.pied{border-top:var(--bord);padding-block:var(--s5) var(--s3);background:rgba(18,17,16,.6)}
+.pied__grille{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--s4);margin-bottom:var(--s5)}
+@media (max-width:56rem){.pied__grille{grid-template-columns:1fr;gap:var(--s4)}}
+.pied h4{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--creme-faible);
+  margin:0 0 var(--s2);font-weight:400}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.pied a{font-size:.88rem;color:var(--creme-doux);transition:color .35s var(--e-sortie)}
+.pied a:hover{color:var(--or-clair)}
+.pied__bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s2);
+  padding-top:var(--s3);border-top:1px solid rgba(201,169,97,.1);
+  font-size:.68rem;letter-spacing:.12em;color:var(--creme-faible)}
+.pied__marque .marque__nom{font-size:1.5rem}
+.pied__mot{margin:var(--s2) 0 0;font-size:.85rem;max-width:30ch;color:var(--creme-faible)}
+</style>
+</head>
+
+<body>
+<div class="curseur" id="curseur" aria-hidden="true"></div>
+
+<!-- ══════════ NAVIGATION ══════════ -->
+<header class="barre" id="barre">
+  <div class="large barre__int">
+    <a class="marque" href="#accueil" aria-label="Le Majestic, accueil">
+      <img src="assets/img/crown.png" alt="" width="38" height="38">
+      <span class="marque__mot">
+        <span class="marque__nom">Le Majestic</span>
+        <span class="marque__sous">L'excellence au masculin</span>
+      </span>
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <ul class="menu">
+        <li><a href="#maison">La maison</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#pack">Pack signature</a></li>
+        <li><a href="#lieu">Le lieu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="pilule pilule--plein" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Réserver</a>
+
+    <button class="brulot" id="brulot" aria-expanded="false" aria-controls="tiroir" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="tiroir" id="tiroir" hidden>
+  <a href="#maison">La maison</a>
+  <a href="#prestations">Prestations</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#pack">Pack signature</a>
+  <a href="#lieu">Le lieu</a>
+  <a href="#contact">Contact</a>
+  <a class="pilule pilule--plein" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+</div>
+
+<main>
+
+<!-- ══════════ HÉROS ══════════ -->
+<section class="heros" id="accueil">
+  <div class="heros__fond">
+    <img src="assets/img/interieur.jpg" alt="Un barbier du Majestic coiffant un client dans le salon, boiseries noires et laiton" fetchpriority="high" width="1402" height="990">
+  </div>
+
+  <div class="large heros__int">
+    <p class="oeil heros__oeil"><i></i>Bouskoura &middot; Triangle Vert</p>
+
+    <h1 class="affiche">
+      <span class="l"><span style="--d:120ms">L'excellence</span></span>
+      <span class="l"><span style="--d:240ms" class="or">au masculin</span></span>
+    </h1>
+
+    <p class="italique heros__sous">« Parce qu'un homme mérite plus qu'une simple coupe. »</p>
+
+    <div class="heros__actes">
+      <a class="pilule pilule--plein" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Prenez place</a>
+      <a class="pilule pilule--fant" href="#prestations">Nos prestations</a>
+    </div>
+
+    <div class="heros__pied">
+      <div class="fait">
+        <span class="fait__c">Google</span>
+        <span class="fait__v"><span class="etoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5,0 &middot; 8 avis</span>
+      </div>
+      <div class="fait">
+        <span class="fait__c">Ouvert</span>
+        <span class="fait__v">7j / 7</span>
+      </div>
+      <div class="fait">
+        <span class="fait__c">Réservation</span>
+        <span class="fait__v"><a href="tel:+212628559986">06 28 55 99 86</a></span>
+      </div>
+    </div>
+
+    <div class="souris">Défilez<i></i></div>
+  </div>
+</section>
+
+<!-- ══════════ BANDEAU ══════════ -->
+<div class="defile" aria-hidden="true">
+  <div class="defile__piste" id="piste">
+    <div class="defile__grp">
+      <span>Chaque détail compte</span><span>l'art de la coiffure</span>
+      <span>Votre style, notre signature</span><span>grooming premium</span>
+      <span>Prenez place</span><span>bouskoura</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MANIFESTE ══════════ -->
+<section id="maison">
+  <div class="enveloppe manif__grille">
+    <div class="manif__texte">
+      <p class="oeil rv" style="--d:0ms">01 &mdash; La maison</p>
+      <h2 class="affiche rv" style="--d:80ms">Un espace pensé<br>pour <span class="or">l'homme moderne</span></h2>
+      <p class="italique rv" style="--d:160ms">Où style, précision et bien-être se rencontrent.</p>
+      <p class="doux rv" style="--d:220ms">Au Majestic, la coupe n'est qu'un début. Nous avons conçu un lieu où l'on entre pour un rendez-vous et d'où l'on ressort avec autre chose : une allure nette, l'esprit posé, le sentiment d'avoir été reçu plutôt que servi.</p>
+      <p class="doux rv" style="--d:280ms">Chaque geste est réalisé avec exigence, chaque outil choisi pour la précision qu'il permet. Même l'attente devient un moment de détente : installez-vous, prenez un café, laissez faire.</p>
+
+      <ul class="manif__liste">
+        <li class="rv" style="--d:340ms"><b>01</b><span>Des barbiers formés à la coupe comme au stylisme, pas seulement à la tondeuse.</span></li>
+        <li class="rv" style="--d:400ms"><b>02</b><span>Un pôle bien-être complet : Head Spa, hammam, massage et soins du visage.</span></li>
+        <li class="rv" style="--d:460ms"><b>03</b><span>Des produits professionnels sélectionnés, dont la gamme L'Oréal Professionnel.</span></li>
+        <li class="rv" style="--d:520ms"><b>04</b><span>Un espace VIP pour ceux qui préfèrent la discrétion et le temps long.</span></li>
+      </ul>
+    </div>
+
+    <figure class="manif__img rv rv-d" style="--d:200ms;margin:0">
+      <span class="manif__cadre" aria-hidden="true"></span>
+      <img src="assets/img/outils.jpg" alt="Ciseaux de coiffure, tondeuse et sabots disposés sur un plateau sombre" width="1280" height="1200" loading="lazy">
+      <figcaption class="manif__note">
+        <b>L'excellence commence par les bons outils.</b>
+        <span>Précision, maîtrise et attention au détail, au cœur de chaque prestation.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ PRESTATIONS ══════════ -->
+<section class="presta" id="prestations">
+  <div class="enveloppe">
+    <div class="presta__tete">
+      <div>
+        <p class="oeil rv">02 &mdash; Prestations</p>
+        <h2 class="affiche rv" style="--d:80ms">Choisissez<br>votre <span class="or">expérience</span></h2>
+      </div>
+      <p class="italique rv" style="--d:160ms;max-width:24ch;margin:0">Coupe, barbe, Head Spa, hammam ou soins premium.</p>
+    </div>
+
+    <div class="presta__grille">
+      <ul class="presta__liste" id="presta-liste">
+
+        <li class="ligne actif" data-img="0">
+          <button class="ligne__t" aria-expanded="true" aria-controls="c1">
+            <span class="ligne__n">01</span>
+            <span class="ligne__nom">Coupe &amp; Barbe</span>
+            <span class="ligne__prix">dès 70 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c1"><div class="ligne__int">
+            <p>Coupe travaillée, dégradé net, contours de barbe redessinés au rasoir. Une finition maîtrisée, adaptée à votre visage et à votre style — pas à un modèle générique.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Coupe%20%26%20Barbe." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="1">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c2">
+            <span class="ligne__n">02</span>
+            <span class="ligne__nom">Head Spa</span>
+            <span class="ligne__prix">200 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c2"><div class="ligne__int">
+            <p>Un rituel japonais du cuir chevelu : nettoyage en profondeur, massage crânien lent, vapeur et soin ciblé. On en ressort la tête légère et les cheveux réellement propres.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Head%20Spa%20relaxant." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="2">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c3">
+            <span class="ligne__n">03</span>
+            <span class="ligne__nom">Hammam &amp; Massage</span>
+            <span class="ligne__prix">dès 100 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c3"><div class="ligne__int">
+            <p>Le hammam traditionnel, gommage compris, suivi d'un massage relaxant. La partie du Majestic que l'on vient chercher quand la semaine a été longue.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Hammam%20%26%20Massage." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="3">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c4">
+            <span class="ligne__n">04</span>
+            <span class="ligne__nom">Soins Visage</span>
+            <span class="ligne__prix">dès 300 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c4"><div class="ligne__int">
+            <p>Nettoyage, gommage et soin du visage adaptés à la peau masculine, souvent malmenée par le rasage. Épilation et esthétique sur demande.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Soins%20visage." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="4">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c5">
+            <span class="ligne__n">05</span>
+            <span class="ligne__nom">Soins Cheveux</span>
+            <span class="ligne__prix">dès 200 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c5"><div class="ligne__int">
+            <p>Soin protéiné, coloration et rituels capillaires professionnels. Pour des cheveux exposés au soleil et à la chaleur : plus de brillance, de souplesse et de tenue.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Soins%20cheveux%20%2F%20coloration." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="5">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c6">
+            <span class="ligne__n">06</span>
+            <span class="ligne__nom">Coupe Enfant</span>
+            <span class="ligne__prix">sur demande</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c6"><div class="ligne__int">
+            <p>Le style commence dès le plus jeune âge. Nous accueillons les enfants avec patience et douceur — une expérience rassurante pour les petits gentlemen, et pour leurs parents.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20r%C3%A9server%20%3A%20Coupe%20enfant." target="_blank" rel="noopener">Réserver</a>
+          </div></div>
+        </li>
+
+        <li class="ligne" data-img="6">
+          <button class="ligne__t" aria-expanded="false" aria-controls="c7">
+            <span class="ligne__n">07</span>
+            <span class="ligne__nom">Espace VIP</span>
+            <span class="ligne__prix">dès 100 DH</span>
+            <span class="ligne__fl" aria-hidden="true"></span>
+          </button>
+          <div class="ligne__corps" id="c7"><div class="ligne__int">
+            <p>Un salon dans le salon : cabine privative, service dédié et rythme sans contrainte. Pour un rendez-vous au calme, seul ou entre proches.</p>
+            <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20des%20informations%20sur%20l%27Espace%20VIP." target="_blank" rel="noopener">Nous consulter</a>
+          </div></div>
+        </li>
+
+      </ul>
+
+      <div class="presta__apercu rv rv-z" id="apercu">
+        <img class="vu" src="assets/img/svc-coupe.jpg" alt="Un barbier du Majestic taille la barbe d'un client" width="880" height="1100" loading="lazy">
+        <img src="assets/img/svc-headspa.jpg" alt="Les bacs de lavage dédiés au Head Spa" width="880" height="1100" loading="lazy">
+        <div class="apercu__vide">
+          <img src="assets/img/crown.png" alt="" width="56" height="56">
+          <p class="italique">Le hammam et les cabines de massage ne se photographient pas.</p>
+          <span class="oeil">Cela se découvre sur place</span>
+        </div>
+        <img src="assets/img/svc-visage.jpg" alt="Serviette chaude posée sur le visage avant le rasage" width="880" height="1100" loading="lazy">
+        <img src="assets/img/svc-cheveux.jpg" alt="Le mur de produits capillaires professionnels du salon" width="880" height="1100" loading="lazy">
+        <img src="assets/img/svc-enfant.jpg" alt="Un enfant coiffé au Majestic" width="880" height="1100" loading="lazy">
+        <img src="assets/img/svc-vip.jpg" alt="Les fauteuils capitonnés de l'espace VIP face aux baies vitrées" width="880" height="1100" loading="lazy">
+      </div>
+    </div>
+
+    <div class="presta__pied rv">
+      <p class="oeil" style="margin:0">Le détail des tarifs, prestation par prestation</p>
+      <a class="pilule pilule--fant" href="#tarifs">Voir tous les tarifs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TARIFS ══════════
+     Relevés sur le « Price List » encadré, filmé sur le comptoir dans un reel
+     du salon (voir RESEARCH.md pour la méthode et la grille complète).
+     Publiés fermes sur décision du client, 2026-08-18 — pas de mention
+     « à confirmer », les tarifs se lisent comme définitifs.
+     Seule exception : la « Coupe kids », dont le montant est masqué par un
+     reflet sur l'image source et reste « sur demande » faute de chiffre. -->
+<section id="tarifs">
+  <div class="enveloppe">
+    <div class="presta__tete">
+      <div>
+        <p class="oeil rv">03 &mdash; Tarifs</p>
+        <h2 class="affiche rv" style="--d:80ms">Nos <span class="or">tarifs</span></h2>
+      </div>
+      <p class="italique rv" style="--d:160ms;max-width:26ch;margin:0">Clairs, affichés, sans surprise à la caisse.</p>
+    </div>
+
+    <div class="tarifs__grille">
+      <div class="tgrp">
+        <h3>Les coupes</h3>
+        <dl>
+          <div class="tl"><dt>Coupe</dt><span class="pt" aria-hidden="true"></span><dd>110<em>DH</em></dd></div>
+          <div class="tl"><dt>Barbe</dt><span class="pt" aria-hidden="true"></span><dd>70<em>DH</em></dd></div>
+          <div class="tl"><dt>Coupe + barbe</dt><span class="pt" aria-hidden="true"></span><dd>170<em>DH</em></dd></div>
+          <div class="tl"><dt>Coupe kids (-10 ans)</dt><span class="pt" aria-hidden="true"></span><dd class="sd">Sur demande</dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Épilation</h3>
+        <dl>
+          <div class="tl"><dt>Joues</dt><span class="pt" aria-hidden="true"></span><dd>20<em>DH</em></dd></div>
+          <div class="tl"><dt>Oreilles</dt><span class="pt" aria-hidden="true"></span><dd>30<em>DH</em></dd></div>
+          <div class="tl"><dt>Nez</dt><span class="pt" aria-hidden="true"></span><dd>30<em>DH</em></dd></div>
+          <div class="tl"><dt>Sourcils</dt><span class="pt" aria-hidden="true"></span><dd>50<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Coloration</h3>
+        <dl>
+          <div class="tl"><dt>Coloration barbe</dt><span class="pt" aria-hidden="true"></span><dd>100<em>DH</em></dd></div>
+          <div class="tl"><dt>Coloration cheveux</dt><span class="pt" aria-hidden="true"></span><dd>200<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Soins visage</h3>
+        <dl>
+          <div class="tl"><dt>Soin basique</dt><span class="pt" aria-hidden="true"></span><dd>300<em>DH</em></dd></div>
+          <div class="tl"><dt>Soin hydrafacial</dt><span class="pt" aria-hidden="true"></span><dd>500<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Soins cheveux</h3>
+        <dl>
+          <div class="tl"><dt>Protéine</dt><span class="pt" aria-hidden="true"></span><dd>400<em>DH</em></dd></div>
+          <div class="tl"><dt>Kératine</dt><span class="pt" aria-hidden="true"></span><dd>450<em>DH</em></dd></div>
+          <div class="tl"><dt>Les mèches</dt><span class="pt" aria-hidden="true"></span><dd>500<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Esthétique</h3>
+        <dl>
+          <div class="tl"><dt>Manucure</dt><span class="pt" aria-hidden="true"></span><dd>70<em>DH</em></dd></div>
+          <div class="tl"><dt>Pédicure</dt><span class="pt" aria-hidden="true"></span><dd>130<em>DH</em></dd></div>
+          <div class="tl"><dt>Pédicure médicale</dt><span class="pt" aria-hidden="true"></span><dd>200<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Massage</h3>
+        <dl>
+          <div class="tl"><dt>Head Spa</dt><span class="pt" aria-hidden="true"></span><dd>200<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Hammam</h3>
+        <dl>
+          <div class="tl"><dt>Hammam marocain</dt><span class="pt" aria-hidden="true"></span><dd>200<em>DH</em></dd></div>
+          <div class="tl"><dt>Hammam royal</dt><span class="pt" aria-hidden="true"></span><dd>350<em>DH</em></dd></div>
+          <div class="tl"><dt>Hammam kids</dt><span class="pt" aria-hidden="true"></span><dd>100<em>DH</em></dd></div>
+          <div class="tl"><dt>Hammam sultan</dt><span class="pt" aria-hidden="true"></span><dd>400<em>DH</em></dd></div>
+        </dl>
+      </div>
+
+      <div class="tgrp">
+        <h3>Espace VIP</h3>
+        <dl>
+          <div class="tl"><dt>Coupe VIP</dt><span class="pt" aria-hidden="true"></span><dd>150<em>DH</em></dd></div>
+          <div class="tl"><dt>Barbe VIP</dt><span class="pt" aria-hidden="true"></span><dd>100<em>DH</em></dd></div>
+          <div class="tl"><dt>Coupe kids VIP</dt><span class="pt" aria-hidden="true"></span><dd>100<em>DH</em></dd></div>
+          <div class="tl"><dt>Manucure VIP</dt><span class="pt" aria-hidden="true"></span><dd>100<em>DH</em></dd></div>
+          <div class="tl"><dt>Pédicure VIP</dt><span class="pt" aria-hidden="true"></span><dd>200<em>DH</em></dd></div>
+          <div class="tl"><dt>Pédicure méd. VIP</dt><span class="pt" aria-hidden="true"></span><dd>250<em>DH</em></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="tarifs__note rv">
+      <p class="oeil" style="margin:0">Tous nos tarifs en dirhams</p>
+      <a class="pilule pilule--plein" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PACK SIGNATURE ══════════ -->
+<section class="pack" id="pack">
+  <div class="enveloppe">
+    <div class="pack__boite rv rv-v">
+      <div class="pack__grille">
+        <div>
+          <p class="oeil">04 &mdash; Offre signature</p>
+          <h2 class="affiche">Le Pack <span class="or">Premium</span></h2>
+          <p class="italique">L'expérience complète, en une seule visite.</p>
+          <ul class="pack__items">
+            <li><i></i>Coupe + barbe soignée</li>
+            <li><i></i>Soins Bostique visage</li>
+            <li><i></i>Head Spa relaxant</li>
+          </ul>
+          <p class="doux" style="font-size:.88rem">Comptez environ deux heures. Prévenez-nous à la réservation : nous bloquons le fauteuil et la cabine sur le même créneau.</p>
+        </div>
+
+        <!-- Tarif observé sur leur Instagram (mai 2026) : 499 DH, mais l'offre
+             était explicitement limitée au mois de mai. À confirmer avec le
+             client avant d'afficher un montant ferme sur le site. -->
+        <div class="pack__prix">
+          <b>Sur demande</b>
+          <span>Tarif du pack</span>
+          <a class="pilule" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20le%20tarif%20et%20la%20disponibilit%C3%A9%20du%20Pack%20Premium." target="_blank" rel="noopener">Demander</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LE LIEU ══════════ -->
+<section class="lieu" id="lieu">
+  <div class="lieu__vue">
+    <img src="assets/img/devanture-large.jpg" alt="La devanture du salon Le Majestic au Triangle Vert de Bouskoura, à la lumière de fin de journée" width="1152" height="953" loading="lazy">
+    <div class="large lieu__int">
+      <div class="lieu__txt">
+        <p class="oeil rv">05 &mdash; Le lieu</p>
+        <h2 class="affiche rv" style="--d:80ms">Triangle Vert,<br><span class="or">Bouskoura</span></h2>
+        <p class="doux rv" style="--d:160ms">Une façade noire et or au cœur du Triangle Vert, à quelques pas des commerces et du parking. On la reconnaît à l'enseigne et au barber pole — et une fois la porte passée, au silence.</p>
+      </div>
+
+      <div class="chiffres" id="chiffres">
+        <div class="chiffre rv" style="--d:0ms"><b data-a="5" data-dec="1"></b><span>Note Google</span></div>
+        <div class="chiffre rv" style="--d:90ms"><b data-a="1825" data-suf="+"></b><span>Abonnés Instagram</span></div>
+        <div class="chiffre rv" style="--d:180ms"><b data-a="7" data-suf="j/7"></b><span>Ouvert toute la semaine</span></div>
+        <div class="chiffre rv" style="--d:270ms"><b data-a="110" data-suf="DH"></b><span>La coupe, à partir de</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AVIS ══════════ -->
+<section id="avis">
+  <div class="enveloppe">
+    <p class="oeil rv">06 &mdash; Ils y sont passés</p>
+    <h2 class="affiche rv" style="--d:80ms">5,0 sur Google.<br>Et <span class="or">pas par hasard.</span></h2>
+
+    <div class="avis__grille">
+      <blockquote class="rv" style="--d:120ms">
+        <p>Très bon salon, propre et professionnel.</p>
+        <div class="avis__qui"><i></i>Omar Aartri &middot; Google</div>
+      </blockquote>
+      <blockquote class="rv" style="--d:220ms">
+        <p>Un grand merci à Mr Radouane, un grand maître de coiffure, je recommande vivement.</p>
+        <div class="avis__qui"><i></i>Bernami Amine &middot; Local Guide</div>
+      </blockquote>
+    </div>
+
+    <div class="presta__pied rv" style="--d:300ms">
+      <p class="oeil" style="margin:0">Vous êtes déjà venu ?</p>
+      <a class="pilule pilule--fant" href="https://g.page/r/CdDQ4UI0tb3kEAE/review" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact">
+  <div class="enveloppe">
+    <p class="oeil rv">07 &mdash; Nous trouver</p>
+    <h2 class="affiche rv" style="--d:80ms">Prenez <span class="or">place</span></h2>
+
+    <div class="contact__grille">
+      <div>
+        <h3 class="affiche rv" style="--d:120ms;font-size:1.15rem;letter-spacing:.16em">Horaires</h3>
+        <dl class="horaires rv" style="--d:180ms" id="horaires">
+          <li data-j="1 2 3 4 5 6"><dt>Lundi &mdash; Samedi</dt><dd>10:00 &mdash; 21:00</dd></li>
+          <li data-j="0"><dt>Dimanche</dt><dd>10:00 &mdash; 20:00</dd></li>
+        </dl>
+        <p class="badge rv" style="--d:240ms" id="badge"><i></i><span>Chargement…</span></p>
+      </div>
+
+      <div>
+        <h3 class="affiche rv" style="--d:120ms;font-size:1.15rem;letter-spacing:.16em">Coordonnées</h3>
+        <dl class="coord rv" style="--d:180ms">
+          <li><dt>Adresse</dt><dd>Triangle Vert,<br>Bouskoura 20250, Casablanca</dd></li>
+          <li><dt>WhatsApp</dt><dd><a href="https://wa.me/212628559986" target="_blank" rel="noopener">06 28 55 99 86</a></dd></li>
+          <li><dt>Téléphone</dt><dd><a href="tel:+212521226542">05 21 22 65 42</a></dd></li>
+          <li><dt>Instagram</dt><dd><a href="https://www.instagram.com/le_majestic_bouskoura/" target="_blank" rel="noopener">@le_majestic_bouskoura</a></dd></li>
+        </dl>
+
+        <div class="contact__actes rv" style="--d:240ms">
+          <a class="pilule pilule--plein" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+          <a class="pilule pilule--fant" href="https://www.google.com/maps/dir/?api=1&amp;destination=33.4835949,-7.6247424" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ APPEL FINAL ══════════ -->
+<section class="final">
+  <div class="final__fond" aria-hidden="true"></div>
+  <div class="enveloppe">
+    <div class="filet centre rv"><i></i></div>
+    <h2 class="affiche rv" style="--d:80ms">Votre style,<br><span class="or">notre signature</span></h2>
+    <p class="italique rv" style="--d:160ms;max-width:38ch;margin-inline:auto">Un message suffit. Nous vous répondons et nous bloquons votre créneau.</p>
+    <a class="pilule pilule--plein rv" style="--d:220ms" href="https://wa.me/212628559986?text=Bonjour%20Le%20Majestic%2C%20je%20souhaite%20prendre%20rendez-vous." target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ PIED DE PAGE ══════════ -->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="pied__grille">
+      <div>
+        <a class="marque pied__marque" href="#accueil">
+          <img src="assets/img/crown.png" alt="" width="44" height="44">
+          <span class="marque__mot">
+            <span class="marque__nom">Le Majestic</span>
+            <span class="marque__sous">L'excellence au masculin</span>
+          </span>
+        </a>
+        <p class="pied__mot">Barbier prestige et spa homme au Triangle Vert, Bouskoura. Ouvert 7j/7.</p>
+      </div>
+      <div>
+        <h4>Le salon</h4>
+        <ul>
+          <li><a href="#maison">La maison</a></li>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#pack">Pack signature</a></li>
+          <li><a href="#lieu">Le lieu</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/212628559986" target="_blank" rel="noopener">WhatsApp &middot; 06 28 55 99 86</a></li>
+          <li><a href="tel:+212521226542">Téléphone &middot; 05 21 22 65 42</a></li>
+          <li><a href="https://www.instagram.com/le_majestic_bouskoura/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=33.4835949,-7.6247424" target="_blank" rel="noopener">Itinéraire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>&copy; <span id="an">2026</span> Le Majestic &middot; Bouskoura</span>
+      <span>Triangle Vert, Bouskoura 20250</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduit = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- année ---------- */
+  document.getElementById("an").textContent = new Date().getFullYear();
+
+  /* ---------- barre : état posé ---------- */
+  var barre = document.getElementById("barre");
+
+  /* ---------- menu mobile ---------- */
+  var brulot = document.getElementById("brulot");
+  var tiroir = document.getElementById("tiroir");
+  var liensTiroir = tiroir.querySelectorAll("a");
+
+  function bascule(ouvrir){
+    brulot.setAttribute("aria-expanded", ouvrir ? "true" : "false");
+    brulot.setAttribute("aria-label", ouvrir ? "Fermer le menu" : "Ouvrir le menu");
+    document.body.style.overflow = ouvrir ? "hidden" : "";
+    if(ouvrir){
+      tiroir.hidden = false;
+      requestAnimationFrame(function(){
+        tiroir.classList.add("ouvert");
+        for(var i=0;i<liensTiroir.length;i++){
+          liensTiroir[i].style.transitionDelay = (90 + i*55) + "ms";
+        }
+      });
+    }else{
+      tiroir.classList.remove("ouvert");
+      for(var j=0;j<liensTiroir.length;j++){ liensTiroir[j].style.transitionDelay = "0ms"; }
+      window.setTimeout(function(){ if(!tiroir.classList.contains("ouvert")) tiroir.hidden = true; }, 520);
+    }
+  }
+  brulot.addEventListener("click", function(){
+    bascule(brulot.getAttribute("aria-expanded") !== "true");
+  });
+  for(var t=0;t<liensTiroir.length;t++){
+    liensTiroir[t].addEventListener("click", function(){ bascule(false); });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && tiroir.classList.contains("ouvert")) bascule(false);
+  });
+
+  /* ---------- bandeau défilant : on double la piste pour une boucle nette ---------- */
+  var piste = document.getElementById("piste");
+  piste.appendChild(piste.firstElementChild.cloneNode(true));
+
+  /* ---------- prestations : liste + aperçu ---------- */
+  var lignes = Array.prototype.slice.call(document.querySelectorAll("#presta-liste .ligne"));
+  var apercus = Array.prototype.slice.call(document.querySelectorAll("#apercu > *"));
+  var actif = 0;
+  var finPointeur = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  function ouvrirCorps(ligne, ouvert){
+    var corps = ligne.querySelector(".ligne__corps");
+    var bouton = ligne.querySelector(".ligne__t");
+    bouton.setAttribute("aria-expanded", ouvert ? "true" : "false");
+    corps.style.height = ouvert ? (corps.firstElementChild.offsetHeight + "px") : "0px";
+  }
+
+  function activer(i){
+    if(i === actif) return;
+    actif = i;
+    for(var k=0;k<lignes.length;k++){
+      var est = (k === i);
+      lignes[k].classList.toggle("actif", est);
+      ouvrirCorps(lignes[k], est);
+    }
+    for(var m=0;m<apercus.length;m++){
+      apercus[m].classList.toggle("vu", m === i);
+    }
+  }
+
+  lignes.forEach(function(ligne, i){
+    ligne.querySelector(".ligne__t").addEventListener("click", function(){ activer(i); });
+    ligne.addEventListener("mouseenter", function(){
+      if(finPointeur.matches) activer(i);
+    });
+    ligne.querySelector(".ligne__t").addEventListener("focus", function(){ activer(i); });
+  });
+
+  function recalerCorps(){
+    for(var k=0;k<lignes.length;k++){ ouvrirCorps(lignes[k], k === actif); }
+  }
+  window.addEventListener("resize", recalerCorps);
+
+  /* ---------- compteurs ---------- */
+  function formate(n, dec){
+    if(dec) return n.toFixed(dec).replace(".", ",");
+    var s = Math.round(n).toString();
+    if(s.length > 3) s = s.slice(0, s.length-3) + " " + s.slice(s.length-3);
+    return s;
+  }
+  function compter(el){
+    if(el.dataset.fait) return;
+    el.dataset.fait = "1";
+    var cible = parseFloat(el.getAttribute("data-a"));
+    var dec = parseInt(el.getAttribute("data-dec") || "0", 10);
+    var suf = el.getAttribute("data-suf") || "";
+    var sufHtml = suf ? '<i>' + suf + '</i>' : "";
+    if(reduit){ el.innerHTML = formate(cible, dec) + sufHtml; return; }
+    var duree = 1500, depart = 0;
+    function pas(ts){
+      if(!depart) depart = ts;
+      var p = Math.min((ts - depart) / duree, 1);
+      var e = 1 - Math.pow(1 - p, 4);           /* easeOutQuart */
+      el.innerHTML = formate(cible * e, dec) + sufHtml;
+      if(p < 1) requestAnimationFrame(pas);
+    }
+    requestAnimationFrame(pas);
+  }
+
+  /* ---------- horaires : jour courant + ouvert / fermé ---------- */
+  (function(){
+    var badge = document.getElementById("badge");
+    var texte = badge.querySelector("span");
+    var d = new Date();
+    var jour = d.getDay();                       /* 0 = dimanche */
+    var minutes = d.getHours()*60 + d.getMinutes();
+    var lignesH = document.querySelectorAll("#horaires li");
+    var ouvre, ferme;
+
+    for(var i=0;i<lignesH.length;i++){
+      var jours = lignesH[i].getAttribute("data-j").split(" ");
+      if(jours.indexOf(String(jour)) !== -1){
+        lignesH[i].classList.add("auj");
+        var h = lignesH[i].querySelector("dd").textContent.split("—");
+        ouvre = parseInt(h[0].trim().split(":")[0],10)*60 + parseInt(h[0].trim().split(":")[1],10);
+        ferme = parseInt(h[1].trim().split(":")[0],10)*60 + parseInt(h[1].trim().split(":")[1],10);
+      }
+    }
+    if(ouvre !== undefined && minutes >= ouvre && minutes < ferme){
+      var reste = ferme - minutes;
+      texte.textContent = reste <= 60 ? "Ouvert · ferme dans " + reste + " min" : "Ouvert maintenant";
+    }else{
+      badge.classList.add("ferme");
+      texte.textContent = "Fermé · nous répondons sur WhatsApp";
+    }
+  })();
+
+  /* ---------- curseur doré ---------- */
+  var curseur = document.getElementById("curseur");
+  if(finPointeur.matches && !reduit){
+    var cx = 0, cy = 0, vx = 0, vy = 0, vivant = false;
+    document.addEventListener("mousemove", function(e){
+      cx = e.clientX; cy = e.clientY;
+      if(!vivant){ vivant = true; vx = cx; vy = cy; curseur.classList.add("actif"); }
+    });
+    document.addEventListener("mouseleave", function(){ curseur.classList.remove("actif"); });
+    (function suit(){
+      vx += (cx - vx) * 0.16;
+      vy += (cy - vy) * 0.16;
+      curseur.style.transform = "translate3d(" + vx + "px," + vy + "px,0)";
+      requestAnimationFrame(suit);
+    })();
+    var cibles = document.querySelectorAll("a, button, .ligne");
+    for(var c=0;c<cibles.length;c++){
+      cibles[c].addEventListener("mouseenter", function(){ curseur.classList.add("grand"); });
+      cibles[c].addEventListener("mouseleave", function(){ curseur.classList.remove("grand"); });
+    }
+  }
+
+  /* ============================================================
+     BALAYAGE AU DÉFILEMENT
+     Un seul passage traite : l'état de la barre, les révélations,
+     les compteurs et — sur petit écran — la prestation active.
+     Pas de verrou rAF : s'il est étranglé (onglet en arrière-plan,
+     capture headless) le drapeau ne se libère jamais et tout meurt.
+     ============================================================ */
+  var aReveler = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+  var compteurs = Array.prototype.slice.call(document.querySelectorAll("#chiffres b"));
+  var listePresta = document.getElementById("presta-liste");
+
+  function balayer(){
+    var h = window.innerHeight;
+
+    barre.classList.toggle("pose", window.scrollY > 40);
+
+    /* Pas de borne basse ( rect.bottom > 0 ) : un saut de defilement — ancre,
+       rechargement a mi-page, capture scriptee — laisse des elements DEJA
+       passes au-dessus du viewport. Avec une borne basse ils ne se revelent
+       jamais et le contenu reste invisible pour de bon. */
+    for(var i = aReveler.length - 1; i >= 0; i--){
+      if(aReveler[i].getBoundingClientRect().top < h * 0.88){
+        aReveler[i].classList.add("in");
+        aReveler.splice(i, 1);
+      }
+    }
+
+    for(var j = compteurs.length - 1; j >= 0; j--){
+      if(compteurs[j].getBoundingClientRect().top < h * 0.9){
+        compter(compteurs[j]);
+        compteurs.splice(j, 1);
+      }
+    }
+
+    /* sur écran tactile / étroit, la ligne la plus proche du centre pilote l'aperçu */
+    if(!finPointeur.matches && listePresta){
+      var rl = listePresta.getBoundingClientRect();
+      if(rl.top < h && rl.bottom > 0){
+        var centre = h * 0.5, meilleur = 0, ecart = Infinity;
+        for(var k=0;k<lignes.length;k++){
+          var rr = lignes[k].getBoundingClientRect();
+          var d2 = Math.abs((rr.top + rr.bottom)/2 - centre);
+          if(d2 < ecart){ ecart = d2; meilleur = k; }
+        }
+        activer(meilleur);
+      }
+    }
+  }
+
+  window.addEventListener("scroll", balayer, {passive:true});
+  window.addEventListener("resize", balayer);
+  balayer();
+
+  /* ---------- entrée du héros ---------- */
+  window.addEventListener("load", function(){
+    document.querySelector(".heros").classList.add("pret");
+    recalerCorps();
+    balayer();
+  });
+  requestAnimationFrame(function(){
+    document.querySelector(".heros").classList.add("pret");
+    recalerCorps();
+  });
+})();
+</script>
+</body>
+</html>
